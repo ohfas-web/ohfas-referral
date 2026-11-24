@@ -566,6 +566,106 @@ html.js .reveal.show{opacity:1;transform:none}
     text-align: center;
   }
 }
+  /* ===== LINE GUIDE ===== */
+
+.line-guide-section {
+  padding: 64px 0 80px;
+  background: #fff;
+}
+
+.line-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.line-guide-card {
+  text-align: center;
+}
+
+.line-guide-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.line-guide-card h3 {
+  margin: 18px 0 8px;
+  font-size: 1.3rem;
+}
+
+.line-guide-card p {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.line-can-do {
+  margin-top: 48px;
+  padding: 28px;
+  background: #edf5ef;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.line-can-do h3 {
+  margin: 0 0 20px;
+  color: #16834a;
+}
+
+.line-can-do ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.line-can-do li {
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.line-note {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.line-note strong {
+  font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  background: linear-gradient(
+    transparent 70%, #d9f3c9 70%
+  );
+}
+
+.line-note p {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 2;
+}
+
+@media (max-width: 640px) {
+  .line-guide-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .line-guide-card img {
+    max-width: 340px;
+    margin: auto;
+  }
+
+  .line-can-do ul {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .line-guide-section {
+    padding: 48px 0 64px;
+  }
+}
 
 </style>
 </head>
@@ -847,40 +947,60 @@ html.js .reveal.show{opacity:1;transform:none}
   </div>
 </section>
 
-<section class="section flow-section" id="flow">
+<section class="section line-guide-section" id="flow">
   <p class="ghost-word">FLOW</p>
   <div class="container">
+
     <div class="section-head reveal">
-      <p class="section-label">REFERRAL FLOW</p>
-      <h2 class="section-title">ご縁から、まずはお話しするまで。</h2>
-      <p class="section-copy">紹介をきっかけにオーファスを知って、少し気になったらLINEへ。そこから、まずはカジュアルに話してみる。シンプルな3ステップです。</p>
+      <p class="section-label">AFTER ADDING LINE</p>
+      <h2 class="section-title">LINEでつながった、その先は。</h2>
+      <p class="section-copy">
+        今すぐ転職を考えていなくても大丈夫。
+        まずは、気軽につながるところから。
+      </p>
     </div>
 
-    <div class="flow-wrap" id="flowWrap">
-      <div class="flow-line" aria-hidden="true"><span class="flow-line-progress" id="flowProgress"></span></div>
-      <div class="flow-grid">
-        <article class="flow-step reveal">
-          <div class="flow-dot">01</div>
-          <h3>紹介をきっかけに知る</h3>
-          <p>友人・家族・知人から紹介されて、会社・仕事・働く人を見てみる。</p>
-        </article>
-        <article class="flow-step reveal">
-          <div class="flow-dot">02</div>
-          <h3>LINEでつながる</h3>
-          <p>もう少し気になったら、採用担当とLINEで気軽につながる。</p>
-        </article>
-        <article class="flow-step reveal">
-          <div class="flow-dot">03</div>
-          <h3>カジュアル面談</h3>
-          <p>仕事内容や働き方について、まずは気軽に話してみる。</p>
-        </article>
-      </div>
+    <div class="line-guide-grid">
+
+      <article class="line-guide-card reveal">
+        <img src="line-step-01.png" alt="LINEを友だち追加" loading="lazy">
+        <h3>LINEを友だち追加</h3>
+        <p>まずはオーファスの採用公式LINEを友だち追加。</p>
+      </article>
+
+      <article class="line-guide-card reveal">
+        <img src="line-step-02.png" alt="採用担当に相談" loading="lazy">
+        <h3>気軽に相談</h3>
+        <p>仕事内容や働き方など、気になることを採用担当に聞いてみる。</p>
+      </article>
+
+      <article class="line-guide-card reveal">
+        <img src="line-step-03.png" alt="カジュアル面談" loading="lazy">
+        <h3>もっと知りたくなったら</h3>
+        <p>ご希望に応じて、会社見学やカジュアル面談へ。</p>
+      </article>
+
     </div>
 
-    <div class="flow-message reveal">
-      <strong>まずは、話してみるところから。</strong>
-      <span>気になることを聞いて、お互いを知る時間にできたらと思っています。</span>
+    <div class="line-can-do reveal">
+      <h3>LINEでできること</h3>
+      <ul>
+        <li>仕事内容・働き方の相談</li>
+        <li>自分に合った求人情報の相談</li>
+        <li>会社見学の申し込み</li>
+        <li>カジュアル面談の日程調整</li>
+        <li>採用情報のお知らせ</li>
+      </ul>
     </div>
+
+    <div class="line-note reveal">
+      <strong>LINEの友だち追加は、応募ではありません。</strong>
+      <p>
+        あなたのタイミングで、あなたのペースで。<br>
+        私たちは、このご縁を大切にしたいと思っています。
+      </p>
+    </div>
+
   </div>
 </section>
 
