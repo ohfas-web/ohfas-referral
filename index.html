@@ -746,7 +746,7 @@ html.js .reveal.show{opacity:1;transform:none}
   /* ===== LINE 6項目レイアウト ===== */
 
 .line-can-do ul {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
@@ -764,11 +764,12 @@ html.js .reveal.show{opacity:1;transform:none}
 
 @media (max-width: 640px) {
   .line-can-do ul {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 28px 8px;
   }
 
   .line-can-do li {
+    grid-column: span 2;
     font-size: .72rem;
     gap: 10px;
   }
@@ -778,8 +779,12 @@ html.js .reveal.show{opacity:1;transform:none}
     height: 34px;
   }
 
+  .line-can-do li:nth-child(4) {
+    grid-column: 2 / 4;
+  }
+
   .line-can-do li:last-child {
-    grid-column: auto;
+    grid-column: 4 / 6;
   }
 }
 </style>
