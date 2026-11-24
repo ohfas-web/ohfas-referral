@@ -743,6 +743,45 @@ html.js .reveal.show{opacity:1;transform:none}
     grid-column: 1 / -1;
   }
 }
+  /* ===== LINE 6項目レイアウト ===== */
+
+.line-can-do ul {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.line-can-do li {
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .line-can-do ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .line-can-do ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 8px;
+  }
+
+  .line-can-do li {
+    font-size: .72rem;
+    gap: 10px;
+  }
+
+  .line-can-do li svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .line-can-do li:last-child {
+    grid-column: auto;
+  }
+}
 </style>
 </head>
 
@@ -1057,33 +1096,36 @@ html.js .reveal.show{opacity:1;transform:none}
       </article>
 
     </div>
-
-    <div class="line-can-do reveal">
+<div class="line-can-do reveal">
   <h3>LINEでできること</h3>
   <ul>
     <li>
-      <i data-lucide="messages-square"></i>
-      <span>仕事内容・<br>働き方の相談</span>
-    </li>
-    <li>
-      <i data-lucide="file-search"></i>
-      <span>自分に合った<br>求人情報の相談</span>
+      <i data-lucide="search"></i>
+      <span>気になる仕事を<br>探してみる</span>
     </li>
     <li>
       <i data-lucide="building-2"></i>
-      <span>会社見学の<br>申し込み</span>
+      <span>オーファスのことを<br>もっと知る</span>
+    </li>
+    <li>
+      <i data-lucide="users"></i>
+      <span>先輩スタッフの<br>声を聞く</span>
+    </li>
+    <li>
+      <i data-lucide="instagram"></i>
+      <span>会社の日常を<br>のぞいてみる</span>
+    </li>
+    <li>
+      <i data-lucide="messages-square"></i>
+      <span>気になることを<br>聞いてみる</span>
     </li>
     <li>
       <i data-lucide="calendar-check"></i>
-      <span>カジュアル面談の<br>日程調整</span>
-    </li>
-    <li>
-      <i data-lucide="bell-ring"></i>
-      <span>採用情報の<br>お知らせ</span>
+      <span>会社見学や<br>面談を相談する</span>
     </li>
   </ul>
 </div>
-
+    
     <div class="line-note reveal">
       <strong>LINEの友だち追加は、応募ではありません。</strong>
       <p>
