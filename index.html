@@ -666,7 +666,81 @@ html.js .reveal.show{opacity:1;transform:none}
     padding: 48px 0 64px;
   }
 }
+/* ===== LINEでできること ===== */
 
+.line-can-do {
+  position: relative;
+  margin-top: 70px;
+  padding: 50px 24px 32px;
+  background: #edf5ef;
+  border: 1.5px solid #b5d5c1;
+  border-radius: 20px;
+}
+
+.line-can-do h3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: 0;
+  padding: 10px 48px;
+  background: #288b58;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+.line-can-do ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.line-can-do li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #234437;
+  font-size: .9rem;
+  line-height: 1.7;
+}
+
+.line-can-do li svg {
+  color: #288b58;
+  width: 46px;
+  height: 46px;
+  stroke-width: 2.3;
+}
+
+@media (max-width: 640px) {
+  .line-can-do ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 12px;
+  }
+
+  .line-can-do h3 {
+    font-size: 1rem;
+    padding: 10px 28px;
+  }
+
+  .line-can-do li {
+    font-size: .8rem;
+  }
+
+  .line-can-do li svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .line-can-do li:last-child {
+    grid-column: 1 / -1;
+  }
+}
 </style>
 </head>
 
@@ -983,15 +1057,30 @@ html.js .reveal.show{opacity:1;transform:none}
     </div>
 
     <div class="line-can-do reveal">
-      <h3>LINEでできること</h3>
-      <ul>
-        <li>仕事内容・働き方の相談</li>
-        <li>自分に合った求人情報の相談</li>
-        <li>会社見学の申し込み</li>
-        <li>カジュアル面談の日程調整</li>
-        <li>採用情報のお知らせ</li>
-      </ul>
-    </div>
+  <h3>LINEでできること</h3>
+  <ul>
+    <li>
+      <i data-lucide="messages-square"></i>
+      <span>仕事内容・<br>働き方の相談</span>
+    </li>
+    <li>
+      <i data-lucide="file-search"></i>
+      <span>自分に合った<br>求人情報の相談</span>
+    </li>
+    <li>
+      <i data-lucide="building-2"></i>
+      <span>会社見学の<br>申し込み</span>
+    </li>
+    <li>
+      <i data-lucide="calendar-check"></i>
+      <span>カジュアル面談の<br>日程調整</span>
+    </li>
+    <li>
+      <i data-lucide="bell-ring"></i>
+      <span>採用情報の<br>お知らせ</span>
+    </li>
+  </ul>
+</div>
 
     <div class="line-note reveal">
       <strong>LINEの友だち追加は、応募ではありません。</strong>
