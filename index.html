@@ -787,34 +787,91 @@ html.js .reveal.show{opacity:1;transform:none}
     grid-column: 4 / 6;
   }
 }
-  <div class="floating-line" id="floatingLine">
+  /* ===== LINE 追従バナー ===== */
 
-  <button class="floating-line-close"
-    type="button"
-    aria-label="バナーを閉じる"
-    onclick="document.getElementById('floatingLine').hidden = true;">
-    ×
-  </button>
+.floating-line {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 950;
+  width: 280px;
+}
 
-  <a href="#flow" class="floating-line-link">
-    <span class="floating-line-copy">
-      まずは、気軽に話してみませんか？
-    </span>
+.floating-line-link {
+  display: block;
+  padding: 18px 12px;
+  background: #06C755;
+  color: #fff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(0,0,0,.15);
+  transition: .25s ease;
+}
 
-    <strong>
-      <i data-lucide="message-circle"></i>
-      LINEでつながる
-      <i data-lucide="chevron-right"></i>
-    </strong>
+.floating-line-link:hover {
+  background: #05B84D;
+  transform: translateY(-4px);
+}
 
-    <small>友だち追加だけでもOK！</small>
-  </a>
+.floating-line-copy {
+  display: block;
+  font-size: .72rem;
+  font-weight: 500;
+}
 
-</div>
+.floating-line strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
 
-<script>
-  if (window.lucide) lucide.createIcons();
-</script>
+.floating-line small {
+  font-size: .7rem;
+}
+
+.floating-line-close {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  z-index: 2;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  border: 1px solid #06C755;
+  border-radius: 50%;
+  background: #fff;
+  color: #288b58;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .floating-line {
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    width: 210px;
+  }
+
+  .floating-line-link {
+    padding: 12px 8px;
+  }
+
+  .floating-line strong {
+    font-size: 1rem;
+  }
+
+  .floating-line-copy {
+    font-size: .6rem;
+  }
+
+  .floating-line small {
+    font-size: .6rem;
+  }
+}
 </style>
 </head>
 
