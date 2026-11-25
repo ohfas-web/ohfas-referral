@@ -787,6 +787,34 @@ html.js .reveal.show{opacity:1;transform:none}
     grid-column: 4 / 6;
   }
 }
+  <div class="floating-line" id="floatingLine">
+
+  <button class="floating-line-close"
+    type="button"
+    aria-label="バナーを閉じる"
+    onclick="document.getElementById('floatingLine').hidden = true;">
+    ×
+  </button>
+
+  <a href="#flow" class="floating-line-link">
+    <span class="floating-line-copy">
+      まずは、気軽に話してみませんか？
+    </span>
+
+    <strong>
+      <i data-lucide="message-circle"></i>
+      LINEでつながる
+      <i data-lucide="chevron-right"></i>
+    </strong>
+
+    <small>友だち追加だけでもOK！</small>
+  </a>
+
+</div>
+
+<script>
+  if (window.lucide) lucide.createIcons();
+</script>
 </style>
 </head>
 
@@ -1592,6 +1620,34 @@ addEventListener("keydown",e=>{
   <script src="https://unpkg.com/lucide@latest"></script>
 <script>
   lucide.createIcons();
+</script>
+  <div class="floating-line" id="floatingLine">
+
+  <button class="floating-line-close"
+    type="button"
+    aria-label="バナーを閉じる"
+    onclick="document.getElementById('floatingLine').hidden = true;">
+    ×
+  </button>
+
+  <a href="#flow" class="floating-line-link">
+    <span class="floating-line-copy">
+      まずは、気軽に話してみませんか？
+    </span>
+
+    <strong>
+      <i data-lucide="message-circle"></i>
+      LINEでつながる
+      <i data-lucide="chevron-right"></i>
+    </strong>
+
+    <small>友だち追加だけでもOK！</small>
+  </a>
+
+</div>
+
+<script>
+  if (window.lucide) lucide.createIcons();
 </script>
 </body>
 </html>
